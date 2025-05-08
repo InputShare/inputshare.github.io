@@ -1,0 +1,378 @@
+@media screen and (max-width: 768px) {
+    .device-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .device-description {
+        margin-top: 1rem !important;
+    }
+
+    .device-description .text {
+        width: 8rem !important;
+    }
+}
+
+.laptop {
+    position: relative;
+    width: 235px;
+    height: 155px;
+    background: var(--device-content-background);
+    border: 12px solid var(--device-border-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.laptop .content {
+    width: 100%;
+    height: 100%;
+    margin-left: -210px;
+    overflow: hidden;
+}
+
+.laptop .content>.item-line {
+    width: 189px;
+    height: 16px;
+    background-color: var(--device-content-color);
+    margin: 8px 11px;
+}
+
+.laptop .content>.item-block {
+    width: 189px;
+    height: 40px;
+    background-color: var(--device-content-color);
+    margin: 8px 11px;
+}
+
+.laptop .content>.items {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 11px;
+}
+
+.laptop .content>.items>.item {
+    width: 58px;
+    height: 40px;
+    background-color: var(--device-content-color);
+}
+
+.laptop .cursor {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    animation: laptop-cursor 10s infinite;
+    z-index: 1;
+}
+
+@keyframes laptop-cursor {
+    0% {
+        top: 16px;
+        left: 16px;
+    }
+
+    12.5% {
+        top: 16px;
+        left: 180px;
+    }
+
+    25% {
+        top: 100px;
+        left: 180px;
+    }
+
+    37.5% {
+        top: 100px;
+        left: 16px;
+    }
+
+    50% {
+        top: 16px;
+        left: 16px;
+    }
+
+    100% {
+        top: 16px;
+        left: 16px;
+    }
+}
+
+.laptop>.content {
+    width: 211px;
+    height: 131px;
+    left: 0;
+    margin-left: 0;
+}
+
+.btm {
+    position: relative;
+    width: 296px;
+    height: 7px;
+    margin-top: 10px;
+    margin-left: -42px;
+    border-radius: 0 0 20px 20px;
+    background: var(--device-btm-color);
+}
+
+.btm:before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 3px;
+    left: 50%;
+    top: 0;
+    margin-left: -21px;
+    border-radius: 0 0 5px 5px;
+    background: var(--device-btm-before-color);
+}
+
+.tablet {
+    position: relative;
+    width: 180px;
+    height: 110px;
+    margin-top: 24px;
+    border: solid 8px var(--device-border-color);
+    border-radius: 6px;
+}
+
+.tablet .cursor {
+    position: absolute;
+    transform: scale(.8);
+    animation: tablet-cursor 10s infinite;
+}
+
+@keyframes tablet-cursor {
+    0% {
+        top: 10px;
+        left: 12px;
+    }
+
+    50% {
+        top: 10px;
+        left: 12px;
+    }
+
+    62.5% {
+        top: 10px;
+        left: 136px;
+    }
+
+    75% {
+        top: 64px;
+        left: 136px;
+    }
+
+    87.5% {
+        top: 64px;
+        left: 12px;
+    }
+
+    100% {
+        top: 10px;
+        left: 12px;
+    }
+}
+
+.tablet .camara {
+    position: absolute;
+    top: -6px;
+    left: 77px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-device-btm-before-shadow);
+}
+
+.tablet .action-bar {
+    position: absolute;
+    left: 40px;
+    bottom: 2px;
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-action-bar);
+    border-radius: 1px;
+}
+
+.tablet .content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-content-wrapper);
+}
+
+.tablet .content {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: var(--device-content-background);
+    overflow: hidden;
+}
+
+.tablet .content>.item-block {
+    width: 143px;
+    height: 34px;
+    background-color: var(--device-content-color);
+    margin: 8px 11px;
+}
+
+.tablet .content>.items {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 11px;
+}
+
+.tablet .content>.items>.item {
+    width: 42px;
+    height: 34px;
+    background-color: var(--device-content-color);
+}
+
+.device-description {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.device-description .text {
+    position: relative;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 9rem;
+}
+
+.device-description .text>* {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.device-description .text .disabled {
+    color: var(--device-content-color);
+    animation: switch-text-disabled 10s infinite;
+}
+
+.device-description .text .enabled {
+    opacity: 0;
+    color: var(--color-text-p);
+    animation: switch-text-enabled 10s infinite;
+}
+
+@keyframes switch-text-disabled {
+    0% {}
+
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes switch-text-enabled {
+    0% {}
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+label {
+    width: 72px;
+    height: 36px;
+    background: var(--device-content-color);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    transition: .3s;
+    animation: switch-label 10s infinite;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+    animation: switch-label-ball 10s infinite;
+}
+
+@keyframes switch-label {
+    0% {}
+
+    45% {
+        background: var(--device-content-color);
+    }
+
+    50% {
+        background: var(--color-text-p);
+    }
+
+    95% {
+        background: var(--color-text-p);
+    }
+
+    100% {
+        background: var(--device-content-color);
+    }
+
+}
+
+@keyframes switch-label-ball {
+    0% {}
+
+    45% {
+        width: 30px;
+        left: 3px;
+    }
+
+    47.5% {
+        width: 36px;
+    }
+
+    50% {
+        width: 30px;
+        left: calc(100% - 33px);
+    }
+
+    95% {
+        width: 30px;
+        left: calc(100% - 33px);
+    }
+
+    97.5% {
+        width: 36px;
+    }
+
+    100% {
+        width: 30px;
+        left: 3px;
+    }
+}
